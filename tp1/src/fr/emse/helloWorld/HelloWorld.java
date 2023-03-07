@@ -1,4 +1,5 @@
 package fr.emse.helloWorld;
+import java.util.Vector;
 
 /**
  * Cette classe est un test.
@@ -11,14 +12,15 @@ public class HelloWorld {
    * Le message à afficher
    */
 private String message;
+private Vector<String> listMessage;
 
 /**
    * Le constructeur de la classe HelloWorld
    *
-   * @param message Le message a afficher
+   * @param message Les messages a afficher
    */
-public HelloWorld(String message) {
-	this.message=message;
+public HelloWorld(Vector<String> listMessage) {
+	this.listMessage = listMessage;
 }
 
    /**
@@ -30,12 +32,20 @@ public String getMessage() {
 	return this.message;
 }
 
+public Vector<String> getListMessage() {
+	return this.listMessage;
+}
+
 /**
    * Cette methode affiche le message dans la console
    */
 public static void main(String[] args){
-   	HelloWorld h = new HelloWorld("Bonjour");
-	System.out.println(h.getMessage());
+	Vector<String> vector = new Vector();
+	vector.add("Bonjour");
+	vector.add("Holla");
+	vector.add("Bonjorno");
+   	HelloWorld h = new HelloWorld(vector);
+	System.out.println(h.getListMessage());
 }
 
 }

@@ -1,0 +1,2 @@
+Commande pour compiler un fichier .java : 		javac -d bin src/fr/emse/helloworld/HelloWorld.java 
+Commande pour exécuter un fichier compilé .class : 	java -classpath bin fr.emse.helloWorld.HelloWorld
